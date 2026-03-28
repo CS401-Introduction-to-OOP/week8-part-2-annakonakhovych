@@ -2,7 +2,7 @@
 
 public class FileResource : Resource, IDisposable
 {
-    public FileResource(string name, bool isopen) : base(name, isopen)
+    public FileResource(string name) : base(name)
     {
     }
 
@@ -20,6 +20,7 @@ public class FileResource : Resource, IDisposable
     
     public void Dispose()
     {
+        Console.WriteLine($"Cleaning up {Name}");
         Close();
     }
 }

@@ -2,7 +2,7 @@
 
 public class ResourceManager<T> where T : Resource
 {
-    private List<T> _resource = new List<T>();
+    private readonly List<T> _resource = new List<T>();
 
     public void Add(T resource)
     {

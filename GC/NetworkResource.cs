@@ -2,7 +2,7 @@
 
 public class NetworkResource : Resource, IDisposable
 {
-    public NetworkResource(string name, bool isopen) : base(name, isopen)
+    public NetworkResource(string name) : base(name)
     {
     }
 
@@ -20,6 +20,7 @@ public class NetworkResource : Resource, IDisposable
     
     public void Dispose()
     {
+        Console.WriteLine($"Cleaning up {Name}");
         Close();
     }
 }

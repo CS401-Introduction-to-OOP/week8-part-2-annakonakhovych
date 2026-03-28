@@ -2,13 +2,13 @@
 
 public abstract class Resource
 {
-    public string Name;
-    public bool IsOpen;
+    public string Name{ get; }
+    public bool IsOpen{ get; protected set; }
 
-    public Resource(string name, bool isopen)
+    public Resource(string name)
     {
         Name = name;
-        IsOpen = isopen;
+        IsOpen = false;
     }
 
     public abstract void Open();
