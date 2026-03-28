@@ -4,6 +4,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Point p1 = new Point { X = 1, Y = 2 };
+        Point p2 = p1;
+        p2.X = 10;
+        p1.Print();
+        p2.Print();
+        Console.WriteLine();
+        
+        PointRef r1 = new PointRef { X = 1, Y = 2 };
+        PointRef r2 = r1;
+        r1.Print();
+        r2.Print();
+        Console.WriteLine();
+        
+// Boxing demo
+        BoxingTester.Test();
     }
 }
